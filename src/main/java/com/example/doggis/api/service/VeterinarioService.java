@@ -38,7 +38,7 @@ public class VeterinarioService {
 				callableStatement.setString(2, veterinario.getPessoa().getRg());
 				callableStatement.setString(3, veterinario.getPessoa().getCpf());
 				callableStatement.setString(4, veterinario.getRegistroConselho());
-				callableStatement.setLong(5, veterinario.getVeterinarioTipoPet().getCodigoTipoPet());
+				callableStatement.setLong(5, 1);
 				callableStatement.executeUpdate();
 			}
 		});

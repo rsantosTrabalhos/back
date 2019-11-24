@@ -35,10 +35,10 @@ public class PessoaResource {
 	private RelatorioService relatorioService;
 	
 	@GetMapping("/veterinarios")
-	public List<Veterinario> listar() {
+	public ResponseEntity<List<Veterinario>> listar() {
 		List<Veterinario> veterinarios = veterinarioService.listar();
 		
-		return veterinarios;
+		return ResponseEntity.ok(veterinarios);
 	}
 	
 	@PostMapping("/veterinario")

@@ -254,20 +254,20 @@ create procedure `atualizar_veterinario`(/*Pessoa*/
 begin
 	
     update  pessoa 
-    set 	nome = nome, 
-			rg = rg, 
-            cpf = cpf
-    where 	id = id;       
+    set 	nome = p_nome, 
+			rg = p_rg, 
+            cpf = p_cpf
+    where 	id = p_id;       
     
     
     update  veterinario 
-    set 	registro_conselho = registro_conselho
-    where 	id = id_veterinario;
+    set 	registro_conselho = p_registro_conselho
+    where 	id = p_id_veterinario;
     
     
     update 	veterinario_tipo_pet 
-    set 	id_tipo_pet = id_tipo_pet
-    where 	id_veterinario = id_veterinario;
+    set 	id_tipo_pet = p_id_tipo_pet
+    where 	id_veterinario = p_id_veterinario;
     
     
 end $$
